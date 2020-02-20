@@ -1,10 +1,11 @@
 package Generics;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Box <F extends Fruit>{
     private float weight;
-    private ArrayList<F> fruits = new ArrayList<>();
+    private List<F> fruits = new ArrayList<>();
     private F fruit;
     private int numberOfFruits;
 
