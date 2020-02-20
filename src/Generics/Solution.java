@@ -16,6 +16,7 @@ public class Solution {
     //Arrays.asList(T... a) - исходник и ArrayList взаимозависимы,
     //Collections.addAll(ArrayList strList, T[] strArr) - исходник и ArrayList независимы друг от друга
     static <T> ArrayList<T> arrayAsList(T[] array) {
+        if(array == null) return null;
         ArrayList<T> list = new ArrayList<>();
         for (int i = 0; i < array.length; i++) {
             list.add(array[i]);
