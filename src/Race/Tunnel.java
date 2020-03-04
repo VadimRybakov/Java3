@@ -21,10 +21,16 @@ public class Tunnel extends Stage {
                 e.printStackTrace();
             } finally {
                 System.out.println(c.getName() + " закончил этап: " + description);
+                theStageIsChecked = true;
                 s.release();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public boolean checkStage() {
+        return theStageIsChecked;
     }
 }
